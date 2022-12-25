@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Paytone+One&family=Raleway:ital,wght@0,300;0,500;0,700;1,300;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>CV - Morales</title>
+</head>
+
+<body>
+    <header class="nav-container">
+        <nav class="nav">
+            <button class="btn-menu" id="nav-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                    <title>Grid</title>
+                    <rect x="48" y="48" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+                    <rect x="288" y="48" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+                    <rect x="48" y="288" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+                    <rect x="288" y="288" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+                </svg>
+                <svg class="display-none" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                    <title>Close</title>
+                    <path
+                        d="M400 145.49L366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49z" />
+                </svg>
+            </button>
+            <h2 class="nickname">TheGhost</h2>
+            <div class="options">
+                <div class="option">
+                    <a href="#home" data-index="0">Inicio</a>
+                    <span class="dot"></span>
+                </div>
+                <div class="option">
+                    <a href="#about-me" data-index="1">Sobre mi</a>
+                    <span class="dot"></span>
+                </div>
+                <div class="option">
+                    <a href="#technologies" data-index="2">Tecnologías</a>
+                    <span class="dot"></span>
+                </div>
+                <div class="option">
+                    <a href="#contact" data-index="3">Contacto</a>
+                    <span class="dot"></span>
+                </div>
+                <div class="option">
+                    <button id="btn-config" class="btn-config">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                            <title>Settings</title>
+                            <path
+                                d="M256 176a80 80 0 1080 80 80.24 80.24 0 00-80-80zm172.72 80a165.53 165.53 0 01-1.64 22.34l48.69 38.12a11.59 11.59 0 012.63 14.78l-46.06 79.52a11.64 11.64 0 01-14.14 4.93l-57.25-23a176.56 176.56 0 01-38.82 22.67l-8.56 60.78a11.93 11.93 0 01-11.51 9.86h-92.12a12 12 0 01-11.51-9.53l-8.56-60.78A169.3 169.3 0 01151.05 393L93.8 416a11.64 11.64 0 01-14.14-4.92L33.6 331.57a11.59 11.59 0 012.63-14.78l48.69-38.12A174.58 174.58 0 0183.28 256a165.53 165.53 0 011.64-22.34l-48.69-38.12a11.59 11.59 0 01-2.63-14.78l46.06-79.52a11.64 11.64 0 0114.14-4.93l57.25 23a176.56 176.56 0 0138.82-22.67l8.56-60.78A11.93 11.93 0 01209.94 26h92.12a12 12 0 0111.51 9.53l8.56 60.78A169.3 169.3 0 01361 119l57.2-23a11.64 11.64 0 0114.14 4.92l46.06 79.52a11.59 11.59 0 01-2.63 14.78l-48.69 38.12a174.58 174.58 0 011.64 22.66z" />
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <aside class="nav-config-container display-none">
+        <div class="nav-config">
+            <h2>Personalizar vista</h2>
+            <section class="config-section">
+                <h3>Color</h3>
+                <div class="config-options">
+                    <button class="option-color" style="--color:#0fd; --font-color:#121212;"></button>
+                    <button class=" option-color" style="--color:#f46;"></button>
+                    <button class="option-color" style="--color:#dd0; --font-color:#121212;"></button>
+                    <button class="option-color" style="--color:#07b607; --font-color:#121212;"></button>
+                    <button class="option-color" style="--color:#e9650d;"></button>
+                </div>
+            </section>
+            <section class=" config-section">
+                <h3>Tema</h3>
+                <div class="config-options config-options-theme">
+                    <button class="config-theme" style="
+                        --tm-primary-color: #e8e9ee;
+                        --tm-primary-color-light: #fdfdfd;
+                        --tm-primary-color-dark: #c5c5c9;
+                        --tm-font-color: #121212;">Claro</button>
+                    <button class="config-theme" style="
+                        --tm-primary-color: #25263d;
+                        --tm-primary-color-light: #2f304d;
+                        --tm-primary-color-dark: #1f2033;
+                        --tm-font-color: #ddd;">Oscuro</button>
+                    <button class="config-theme" style="
+                        --tm-primary-color: #101010;
+                        --tm-primary-color-light: #202020;
+                        --tm-primary-color-dark: #000;
+                        --tm-font-color: #ddd;">Negro</button>
+                </div>
+            </section>
+        </div>
+    </aside>
+    <main>
+        <section class="section-container section-home" id="home" data-index="0">
+            <div class="profile">
+                <figure>
+                    <img class="profile-picture"
+                        src="https://www.superprof.co/imagenes/anuncios/profesor-home-persona-seria-formal-con-experiencia-mas-anos-residiendo-trabajando-inglaterra-ofrece-para-dar-apoyo.jpg"
+                        alt="Andre Morales">
+                    <div class="profile-picture-border"></div>
+                </figure>
+                <h1>Matías Morales</h1>
+                <h3>Front-end Developer</h2>
+                    <a class="profile-button" href="#contact">Contrátame</a>
+            </div>
+        </section>
+        <section class="section-container about" id="about-me" data-index="1">
+            <h2>¿Quien soy?</h2>
+            <section class="about-container">
+                <div class="img-container">
+                    <img src="./resources/programming.gif" alt="Gif mostrando código de programación" loading="lazy">
+                </div>
+                <div class="content-container">
+                    <input type="radio" name="about-content" id="description" checked>
+                    <input type="radio" name="about-content" id="studies">
+                    <input type="radio" name="about-content" id="projects">
+                    <div class="controls">
+                        <label for="description" class="dot-option">Descripción</label>
+                        <label for="studies" class="dot-option">Estudios</label>
+                        <label for="projects" class="dot-option">Proyectos</label>
+                    </div>
+                    <div class="about-text-container">
+                        <article class="content">
+                            <h3>Descripción</h3>
+                            <p>
+                                Soy un desarrollador web front-end apasionado. He estudiado <b><strong>HTML,</strong>,
+                                    <strong>CSS</strong>, <strong>JavaScript</strong>, entre otras tecnologías, además
+                                    de tener fuertes conocimientos en diseño web.</b>
+                            </p>
+                            <p>
+                                Me encanta crear interfaces de usuario atractivas y fáciles de usar. En mi tiempo libre,
+                                me mantengo
+                                actualizado con las últimas tendencias y tecnologías en el mundo del desarrollo web y
+                                participo en proyectos personales para mejorar mis habilidades.
+                            </p>
+                        </article>
+                        <article class="content">
+                            <h3>Estudios</h3>
+                            <ul>
+                                <li>
+                                    <p>
+                                        <strong>IDAT</strong>: En este aprendí
+                                        cosas varias como <b><strong>Java</strong>, <strong>C#</strong>, <strong>Entity
+                                                Framework</strong>, <strong>Python</strong>, etc. </b>Desarrollé algunos
+                                        proyectos como un sistema de ventas, sistema de carga marítima, etc.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>YouTube</strong> Aquí encontré mucha información relevante,
+                                        tales como
+                                        cursos de <b><strong>HTML</strong>, <strong>CSS</strong>,
+                                            <strong>JavaScript</strong>, <strong>Git</strong>, <strong>React</strong>,
+                                            <strong>GNU/Linux</strong>, <strong>maquetación</strong>,
+                                            <strong>Python</strong>,
+                                            entre otras cosas.</b>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>OpenBootcamp</strong>: Actualmente me encuentro aprendiendo a fondo
+                                        <strong>React</strong> en esta plataforma.
+                                    </p>
+                                </li>
+                            </ul>
+                        </article>
+                        <article class="content">
+                            <h3>Proyectos</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi saepe voluptatem ad
+                                accusamus
+                                aliquid, facilis quo omnis id sed excepturi eius, modi voluptatum maiores error
+                                cupiditate
+                                recusandae et. Unde, voluptatem.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="section-container" id="technologies" data-index="2">
+
+        </section>
+        <section class="section-container contact" id="contact" data-index="3">
+            <article class="social-media">
+                <h2>Redes y otros</h2>
+                <div class="media-container">
+                    <aside class="media">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                            <title>Logo Linkedin</title>
+                            <path
+                                d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z" />
+                        </svg>
+                        <h4>Linkedin</h4>
+                        <address><a href="https://www.linkedin.com/in/mat%C3%ADas-morales-02037b226/" target="_blank"
+                                rel="noopener">Matias Morales</a></address>
+                    </aside>
+                    <aside class="media">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                            <title>Mail</title>
+                            <path
+                                d="M424 80H88a56.06 56.06 0 00-56 56v240a56.06 56.06 0 0056 56h336a56.06 56.06 0 0056-56V136a56.06 56.06 0 00-56-56zm-14.18 92.63l-144 112a16 16 0 01-19.64 0l-144-112a16 16 0 1119.64-25.26L256 251.73l134.18-104.36a16 16 0 0119.64 25.26z" />
+                        </svg>
+                        <h4>Email</h4>
+                        <address><a href="mailto:matias.plin@gmail.com">matias.plin@gmail.com</a></address>
+                    </aside>
+                    <aside class="media">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                            <title>Call</title>
+                            <path
+                                d="M391 480c-19.52 0-46.94-7.06-88-30-49.93-28-88.55-53.85-138.21-103.38C116.91 298.77 93.61 267.79 61 208.45c-36.84-67-30.56-102.12-23.54-117.13C45.82 73.38 58.16 62.65 74.11 52a176.3 176.3 0 0128.64-15.2c1-.43 1.93-.84 2.76-1.21 4.95-2.23 12.45-5.6 21.95-2 6.34 2.38 12 7.25 20.86 16 18.17 17.92 43 57.83 52.16 77.43 6.15 13.21 10.22 21.93 10.23 31.71 0 11.45-5.76 20.28-12.75 29.81-1.31 1.79-2.61 3.5-3.87 5.16-7.61 10-9.28 12.89-8.18 18.05 2.23 10.37 18.86 41.24 46.19 68.51s57.31 42.85 67.72 45.07c5.38 1.15 8.33-.59 18.65-8.47 1.48-1.13 3-2.3 4.59-3.47 10.66-7.93 19.08-13.54 30.26-13.54h.06c9.73 0 18.06 4.22 31.86 11.18 18 9.08 59.11 33.59 77.14 51.78 8.77 8.84 13.66 14.48 16.05 20.81 3.6 9.53.21 17-2 22-.37.83-.78 1.74-1.21 2.75a176.49 176.49 0 01-15.29 28.58c-10.63 15.9-21.4 28.21-39.38 36.58A67.42 67.42 0 01391 480z" />
+                        </svg>
+                        <h4>Teléfono</h4>
+                        <address><a href="tel:960854283">+51 960 854 283</a></address>
+                    </aside>
+                    <aside class="media">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                            <title>Logo Github</title>
+                            <path
+                                d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z" />
+                        </svg>
+                        <h4>GitHub</h4>
+                        <address><a href="https://github.com/TheeGhoost" target="_blank" rel="noopener">TheeGhoost</a>
+                        </address>
+                    </aside>
+                </div>
+            </article>
+            <form class="form" autocomplete="off">
+                <h2>Contactar</h3>
+                    <div class="form-input">
+                        <input type="text" name="name" required placeholder=" " title="El nombre no es válido"
+                            autocomplete="off">
+                        <label>Nombre</label>
+                    </div>
+                    <div class="form-input">
+                        <input type="email" name="email" required placeholder=" " title="El email no es válido"
+                            autocomplete="off">
+                        <label>Email</label>
+                    </div>
+                    <div class="form-input">
+                        <input type="text" name="about" required placeholder=" " title="El asunto es obligatorio"
+                            autocomplete="off">
+                        <label>Asunto</label>
+                    </div>
+                    <div class="form-input form-textarea">
+                        <textarea name="message" required placeholder=" "></textarea>
+                        <label>Mensaje</label>
+                    </div>
+                    <input type="submit" value="Enviar" class="form-submit">
+            </form>
+            <div class="loader-container">
+                <div class="loader"></div>
+                <h2>Cargando...</h2>
+            </div>
+            <h2 class="form-response"></h2>
+        </section>
+    </main>
+    <footer>
+        <p>Sitio desarrolado por Matías Morales</p>
+    </footer>
+    <script src="scripts/index.js" type="module"></script>
+</body>
+
+</html>
