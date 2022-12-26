@@ -497,7 +497,8 @@ input[type="submit"] {
     justify-content: space-evenly;
     flex-wrap: wrap;
     font-size: var(--step-1);
-    padding: 0 var(--padding-1);
+    padding: var(--padding-1);
+    padding-top: 0;
     gap: var(--padding-1);
 }
 
@@ -541,13 +542,12 @@ input[type="submit"] {
 
 .about-text-container .content {
     overflow-y: auto;
-    padding: var(--padding-1);
-    padding-left: calc(var(--padding-1) + .2rem);
+    padding: 0 var(--padding-1) var(--padding-1) calc(var(--padding-1) + .2rem);
     width: 25%;
 }
 
 .about-text-container .content::-webkit-scrollbar {
-    max-width: 0;
+    max-width: 1px;
 }
 
 .about-text-container .content  h3 {
@@ -594,6 +594,146 @@ input[type="submit"] {
     font-size: var(--step-1);
 }
 
+.content .projects {
+    padding: var(--padding-1) 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--padding-1);
+    justify-content: center;
+    align-items: center;
+}
+
+.content .projects .project {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 20rem;
+    overflow: hidden;
+}
+
+.content .projects .project:hover .details {
+    top: 0;
+}
+
+.content .projects .project:hover img {
+    transform: scale(1.1);
+}
+
+.content .projects .project img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+    transition: transform .3s ease-out;
+}
+
+.content .projects .project .details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: var(--padding-2);
+    background-color: #0007;
+    color: var(--font-color);
+    text-align: center;
+    top: -100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(.5rem);
+    transition: top .3s ease-out;
+}
+
+.content .projects .project .details p {
+    font-weight: normal;
+}
+
+/* 
+/////////////////////////////////////////////////////////
+                                ABILITIES
+/////////////////////////////////////////////////////////
+*/
+
+.section-container.abilities {
+    padding: var(--padding-1);
+    gap: var(--padding-2);
+}
+
+.soft-skills {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(max(16rem, 40%), 1fr));
+    gap: var(--padding-2);
+    justify-items: center;
+}
+
+.soft-skills .skill {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--padding-1) / 2);
+}
+
+.soft-skills .skill p {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--step-1);
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.soft-skills .skill progress {
+    width: 100%;
+    height: var(--step-1);
+    border-radius: 0;
+}
+
+.soft-skills .skill progress::-webkit-progress-bar {
+    background-color: var(--primary-color-light);
+} 
+
+.soft-skills .skill progress::-webkit-progress-value {
+    background-color: var(--secondary-color);
+    filter: 
+        drop-shadow(0 0 .2rem var(--secondary-color)) 
+        drop-shadow(0 0 .5rem var(--secondary-color));
+}
+
+.tech-skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--padding-2);
+}
+
+.tech-skills .skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--padding-1) / 2);
+    text-align: center;
+    font-size: var(--step-1);
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.tech-skills .skill:hover svg {
+    filter: 
+        drop-shadow(0 0 .7rem var(--secondary-color))
+        saturate(1.5);
+}
+.tech-skills .skill svg {
+    width: clamp(6rem, 5rem + 5vw, 10rem);
+    fill: var(--secondary-color);
+    filter: drop-shadow(0 0 .3rem var(--secondary-color));
+    transition: filter .3s ease-out;
+}
 
 /* 
 /////////////////////////////////////////////////////////
@@ -656,7 +796,10 @@ input[type="submit"] {
 
 .media-container .media address {
     font-size: var(--step-0);
+    width: 100%;
+    text-align: center;
     font-style: normal;
+    overflow-wrap: break-word;
     font-family: sans-serif;
 }
 
