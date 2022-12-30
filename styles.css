@@ -512,17 +512,17 @@ input[type="submit"] {
 }
 
 .about-container .content-container > input:nth-child(1):checked ~ 
-.about-text-container {
+.about-text-box-container .about-text-container {
     left: 0;
 }
 
 .about-container .content-container > input:nth-child(2):checked ~ 
-.about-text-container {
+.about-text-box-container .about-text-container {
     left: -100%;
 }
 
 .about-container .content-container > input:nth-child(3):checked ~ 
-.about-text-container {
+.about-text-box-container .about-text-container {
     left: -200%;
 }
 
@@ -530,6 +530,11 @@ input[type="submit"] {
     visibility: hidden;
     pointer-events: none;
     position: absolute;
+}
+
+.about-text-box-container {
+    flex-grow: 1;
+    overflow: hidden;
 }
 
 .about-text-container {
@@ -625,16 +630,17 @@ input[type="submit"] {
 
 .content .projects .project img {
     width: 100%;
-    height: 25vh;
+    height: 100%;
     object-fit: cover;
     transition: transform .3s ease-out;
 }
 
 .content .projects .project .details {
     position: absolute;
+    overflow: auto;
     width: 100%;
     height: 100%;
-    padding: var(--padding-2);
+    padding: var(--padding-1);
     background-color: #0007;
     color: var(--font-color);
     text-align: center;
@@ -648,8 +654,13 @@ input[type="submit"] {
     transition: top .3s ease-out;
 }
 
+.content .projects .project .details h4 {
+    font-size: min(var(--step-2), 5vw);
+}
+
 .content .projects .project .details p {
     font-weight: normal;
+    font-size: min(var(--step-1), 4vw);
 }
 
 /* 
