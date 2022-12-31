@@ -424,7 +424,7 @@ input[type="submit"] {
 
 .section-container.about  > h2 {
     position: relative;
-    padding-bottom: var(--padding-1);
+    padding: var(--padding-1);
 }
 
 .section-container.about  > h2::after {
@@ -670,8 +670,11 @@ input[type="submit"] {
 */
 
 .section-container.abilities {
-    padding: var(--padding-1);
     gap: var(--padding-2);
+}
+
+.section-container.abilities > * {
+    padding: var(--padding-1);
 }
 
 .soft-skills {
@@ -714,36 +717,61 @@ input[type="submit"] {
         drop-shadow(0 0 .5rem var(--secondary-color));
 }
 
-.tech-skills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: var(--padding-2);
+.carousel-container {
+    width: 100%;
+    overflow: auto;
 }
 
-.tech-skills .skill {
+.carousel {
+    width: 100%;
     display: flex;
+    position: relative;
+}
+
+.carousel * {
+    /* pointer-events: none; */
+    user-select: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+    width: 0;
+    height: 0rem;
+}
+
+.carousel .card-container {
+    background-color: var(--primary-color-light);
+    padding: var(--padding-1);
+    margin: calc(var(--padding-1) / 2);
+    border-radius: 1rem;
+    min-width: 18rem;
+    height: 25rem;
+    transition: filter .3s ease-out, transform .3s ease-out;
+    box-shadow: 
+        0 0 var(--padding-1) var(--primary-color-dark);
+}
+.carousel .card-container:hover {
+    filter: saturate(1.5) brightness(1.1);
+    transform: scale(.95);
+}
+.carousel .card-container .card {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: calc(var(--padding-1) / 2);
-    text-align: center;
-    font-size: var(--step-1);
-    font-family: sans-serif;
-    font-weight: bold;
+    gap: var(--padding-2);
 }
 
-.tech-skills .skill:hover svg {
-    filter: 
-        drop-shadow(0 0 .7rem var(--secondary-color))
-        saturate(1.5);
+.carousel .card-container .card svg {
+    width: 70%;
+    height: auto;
 }
-.tech-skills .skill svg {
-    width: clamp(6rem, 5rem + 5vw, 10rem);
-    fill: var(--secondary-color);
-    filter: drop-shadow(0 0 .3rem var(--secondary-color));
-    transition: filter .3s ease-out;
+
+.carousel .card-container .card svg path {
+    fill: var(--svg-color);
+    filter: drop-shadow(0 0 1rem var(--svg-color));
 }
 
 /* 
@@ -770,6 +798,10 @@ input[type="submit"] {
 
 .section-container.contact > * {
     width: 100%;
+}
+
+.section-container.contact h2 {
+    padding: var(--padding-2) var(--padding-1);
 }
 
 .social-media {

@@ -37,7 +37,7 @@ const contactForm = (form, inputs, loader, response) => {
             const $loader = d.querySelector(loader);
             const message = d.querySelector(response);
             $loader.style.display = "flex";
-            fetch("https://formsubmit.co/ajax/andremoralesdev@gmail.com", {
+            fetch("https://formsubmit.co/ajax/matias.plin@gmail.com", {
                 method: "POST",
                 body: new FormData(e.target)
             })

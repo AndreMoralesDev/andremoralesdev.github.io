@@ -1,3 +1,4 @@
+import carouselMovement from "./carousel.js";
 import config from "./config.js";
 import contactForm from "./contactForm.js";
 import nav from "./nav.js";
@@ -7,4 +8,5 @@ d.addEventListener("DOMContentLoaded", e => {
     config("btn-config", ".nav-config-container");
     contactForm(".form", ".form-input input, .form-textarea", 
                             ".loader-container", ".form-response");
+    carouselMovement();
 })
