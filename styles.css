@@ -314,6 +314,7 @@ input[type="submit"] {
 
 .profile {
     display: flex;
+    padding-top: calc(10% + 1rem);
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -376,6 +377,8 @@ input[type="submit"] {
     max-width: 30rem;
     height: auto;
     border-radius: 50%;
+    filter: 
+        drop-shadow(0 0 calc(var(--step-0) / 3) var(--font-color));
     transition: filter .3s ease-in-out;
 }
 
@@ -720,6 +723,7 @@ input[type="submit"] {
 .carousel-container {
     width: 100%;
     overflow: auto;
+    padding: 0 1rem;
 }
 
 .carousel {
@@ -729,7 +733,6 @@ input[type="submit"] {
 }
 
 .carousel * {
-    /* pointer-events: none; */
     user-select: none;
 }
 
