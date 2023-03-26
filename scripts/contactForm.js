@@ -30,9 +30,6 @@ const contactForm = (form, inputs, loader, response) => {
         if ($inputsToSubmit.length != $inputs.length) location.reload();
         const errores = [...$inputs].some(e => 
             e.parentElement.querySelector(".error-span"));
-        setTimeout(() => {
-            
-        }, 5000);
         if (!errores) {
             const $loader = d.querySelector(loader);
             const message = d.querySelector(response);
