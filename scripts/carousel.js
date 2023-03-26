@@ -24,7 +24,11 @@ const d = document,
 
 const carouselMovement = () => {
     setMaxLeft();
-    window.addEventListener("resize", e => setMaxLeft());
+    window.addEventListener("resize", e => {
+        move = false, left  = 0, down = 0, up = 0, maxLeft = 0;
+        carousel.style.left = `0px`
+        setMaxLeft()
+    });
     carouselContainer.addEventListener("mousedown", e => {
         move = true;
         down = e.clientX;

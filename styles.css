@@ -35,7 +35,7 @@
     --step-5: clamp(2.6em, 2.1rem + 2.4vw, 4.5rem);
 
     --width-section-container: 100rem;
-    --height-nav: calc(3rem + 5vh);
+    --height-nav: calc(3rem + max(5vh, 3rem));
 
     --z-index-form-loader: 995;
     --z-index-form-response: 993;
@@ -446,9 +446,9 @@ input[type="submit"] {
     position: relative;
     background-color: transparent;
     backdrop-filter: contrast(0.9);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(18rem, 15rem + 30vw, 30rem), 1fr));
-    min-height: 60vh;
+    display:flex;
+    height: 250vh;
+    max-height: 50rem;
     padding: calc(var(--padding-1) / 1.5);
     overflow: hidden;
 }
@@ -471,28 +471,27 @@ input[type="submit"] {
 }
 .about-container > * { 
     background-color: var(--primary-color-light);
+    width: 100%;
     z-index: 10; 
 }
 .about-container .img-container {
-    width: 100%;
+    width: 90%;
     overflow: hidden;
-    padding: var(--padding-1);
 }
 
 .about-container .img-container img {
     width: 100%;
     height: 100%;
+    padding: var(--padding-1);
     object-fit: cover;
 }
 
 .about-container .content-container {
-    width: 100%;
     height: 100%;
+    padding: var(--padding-1);  
     display: flex;
     flex-direction: column;
-    padding: var(--padding-1);
     overflow: hidden;
-    max-height: calc(60vh - (var(--padding-1) / 1.5) * 2 + (var(--padding-1) * 2));
 }
 
 .about-container .content-container .controls {
@@ -1088,6 +1087,13 @@ footer p {
     }
     .nav .options.active {
         right: 0;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+    .about-container .img-container {
+        width: 100%;;
     }
 }
 
