@@ -549,7 +549,7 @@ input[type="submit"] {
 
 .about-text-container .content {
     overflow-y: auto;
-    padding: 0 var(--padding-1) var(--padding-1) calc(var(--padding-1) + .2rem);
+    padding: 0 var(--padding-1);
     width: 25%;
 }
 
@@ -602,9 +602,8 @@ input[type="submit"] {
 }
 
 .content .projects {
-    padding: var(--padding-1) 0;
+    padding: var(--padding-1) 0 0 0;
     width: 100%;
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: var(--padding-1);
