@@ -1,1 +1,2 @@
 User-agent: *
+Sitemap: https://andremoralesdev.github.io/sitemap.xml
