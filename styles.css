@@ -388,11 +388,14 @@ input[type="submit"] {
 
 .profile h1 {
     font-size: var(--step-5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--step-0);
     animation: pop-left .5s ease-out .3s both ;
 }
-.profile h3 {
+.profile h1 span {
     font-size: var(--step-3);
-    animation: pop-right .5s ease-out .8s both;
 }
 
 .profile .profile-button {
@@ -401,7 +404,7 @@ input[type="submit"] {
     font-size: var(--step-1);
     border-radius: 1rem;
     color: var(--font-color-theme);
-    animation: pop-top .5s ease-out 1.3s both;
+    animation: pop-top .5s ease-out .8s both;
     transition: box-shadow .3s ease-out;
     box-shadow: 
         0 0 2rem var(--primary-color-dark);
