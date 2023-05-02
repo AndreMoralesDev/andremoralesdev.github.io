@@ -148,7 +148,7 @@ input[type="submit"] {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    padding: var(--padding-1);
+    padding:  var(--padding-1);
     align-items: center;
 }
 
@@ -170,6 +170,7 @@ input[type="submit"] {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: calc(var(--padding-1) / 2);
 }
 
@@ -314,7 +315,7 @@ input[type="submit"] {
 
 .profile {
     display: flex;
-    padding-top: calc(10% + 1rem);
+    padding-top: calc(var(--height-nav) + 2.25rem);
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -1096,6 +1097,12 @@ footer p {
     }
     .about-container .img-container {
         width: 100%;;
+    }
+}
+
+@media screen and (min-height: 800px) {
+    .profile {
+        padding-top: 1rem;
     }
 }
 
