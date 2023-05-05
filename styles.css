@@ -383,10 +383,6 @@ input[type="submit"] {
     transition: filter .3s ease-in-out;
 }
 
-.profile .profile-picture:hover {
-    filter: grayscale(1);
-}
-
 .profile h1 {
     font-size: var(--step-5);
     text-align: center;
@@ -402,20 +398,21 @@ input[type="submit"] {
 .profile .profile-button {
     background-color: var(--secondary-color);
     padding: var(--padding-1);
+    margin-bottom: calc(var(--step-0) * 2.5);
     font-size: var(--step-1);
     border-radius: 1rem;
     color: var(--font-color-theme);
     animation: pop-top .5s ease-out .8s both;
     transition: box-shadow .3s ease-out;
     box-shadow: 
-        0 0 2rem var(--primary-color-dark);
+        0 0 var(--step-0) var(--primary-color-dark);
 }
 
 .profile .profile-button:hover {
     box-shadow: 
-        0 0 1vh var(--secondary-color),
-        0 0 3vh var(--secondary-color),
-        0 0 6vh var(--secondary-color);
+        0 0 calc(var(--step-0) / 2) var(--secondary-color),
+        0 0 calc(var(--step-0)) var(--secondary-color),
+        0 0 calc(var(--step-0) * 2) var(--secondary-color);
 }
 
 /* 
@@ -917,9 +914,9 @@ input[type="submit"] {
 
 .form .form-submit:hover {
     box-shadow: 
-        0 0 1vh var(--secondary-color),
-        0 0 3vh var(--secondary-color),
-        0 0 6vh var(--secondary-color);
+        0 0 calc(var(--step-0) / 2) var(--secondary-color),
+        0 0 calc(var(--step-0)) var(--secondary-color),
+        0 0 calc(var(--step-0) * 2) var(--secondary-color);
 }
 
 .loader-container {
@@ -1080,12 +1077,14 @@ footer p {
         position: fixed;
         flex-direction: column;
         justify-content: flex-start;
+        padding: var(--step-0) 0;
         padding-top: var(--height-nav);
         top: 0;
         right: min(-30rem, 100vw);
         height: 100vh;
         width: 100vw;
         max-width: 30rem;
+        overflow-y: auto;
         transition: right .3s ease-in-out;
     }
     .nav .options.active {
