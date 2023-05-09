@@ -644,7 +644,7 @@ input[type="submit"] {
     height: 100%;
     padding: var(--padding-1);
     background-color: #0007;
-    color: var(--font-color);
+    color: #fff;
     text-align: center;
     top: -100%;
     left: 0;
