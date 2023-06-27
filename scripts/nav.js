@@ -6,7 +6,7 @@ const nav = (dots, button, navOptions) => {
     const $navOptions = d.querySelector(navOptions);
     const $header = d.querySelector("header.nav-container");
 
-    d.addEventListener("scroll", () => {
+    const navObserver = () => {
         $sections.forEach(section => {
             const marginTop = $header.getBoundingClientRect().height;
             const top = window.scrollY;
@@ -21,7 +21,11 @@ const nav = (dots, button, navOptions) => {
                 })
             }
         })
-    })
+    }
+    
+    navObserver();
+
+    d.addEventListener("scroll", navObserver);
 
     d.addEventListener("click", e => {
         if (e.target === $btn) {
