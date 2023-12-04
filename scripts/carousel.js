@@ -13,8 +13,8 @@ const d = document,
     },
     setMaxLeft = () => {
         let carouselContainerWidth = getTotalWidth(carouselContainer);
-        let numCards = 8 - Math.floor(carouselContainerWidth / cardWidth);
-        let extra = carouselContainerWidth - (cardWidth * (8 - numCards)) - 20;
+        let numCards =10 - Math.floor(carouselContainerWidth / cardWidth);
+        let extra = carouselContainerWidth - (cardWidth * (10 - numCards)) - 20;
         maxLeft = cardWidth * -1 * numCards + extra
     },
     carouselContainer = $(".carousel-container"),

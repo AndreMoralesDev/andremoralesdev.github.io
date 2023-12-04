@@ -773,7 +773,6 @@ input[type="submit"] {
 
 .carousel .card-container .card svg path {
     fill: var(--svg-color);
-    filter: drop-shadow(0 0 1rem var(--svg-color));
 }
 
 /* 
@@ -1108,3 +1107,30 @@ footer p {
 .display-none {
     display: none;
 }
+
+/* 
+/////////////////////////////////////////////////////////
+                                    TESTS
+/////////////////////////////////////////////////////////
+*/
+
+/* @keyframes test {
+	0% {
+		opacity: 0 !important;
+	}
+
+	100% {
+		opacity: 1 !important;
+	}
+}
+
+.section-container.abilities .soft-skills {
+    view-timeline-name: --subjectRevea;
+	view-timeline-axis: block;
+
+	animation-timeline: --subjectRevea;
+	animation-name: test;
+
+	animation-range: entry 25% cover 50% !important;
+	animation-fill-mode: both !important;
+} */
