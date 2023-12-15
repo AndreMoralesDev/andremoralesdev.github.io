@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://andremoralesdev.vercel.app/sitemap.xml
+Sitemap: https://andremoralesdev.github.io/sitemap.xml
